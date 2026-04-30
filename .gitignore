@@ -16,3 +16,15 @@ __pycache__/
 # Generated files (optional)
 *.urdf
 *_flat*
+
+# External repos
+aiml_dart/
+ros2_rm_robot/
+
+# Temp files
+frames_*.pdf
+frames_*.gv
+test.urdf
+
+# IDE
+.vscode/
