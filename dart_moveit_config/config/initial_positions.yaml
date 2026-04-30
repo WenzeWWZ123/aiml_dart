@@ -1,0 +1,10 @@
+# Default initial positions for aiml_dart's ros2_control fake system
+
+initial_positions:
+  r_joint1: 0
+  r_joint2: 0
+  r_joint3: 0
+  r_joint4: 0
+  r_joint5: 0
+  r_joint6: 0
+  r_joint7: 0

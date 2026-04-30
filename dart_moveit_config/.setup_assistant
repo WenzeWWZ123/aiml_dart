@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: dart_description
+    relative_path: urdf/aiml_dart_flat_clean.urdf
+  srdf:
+    relative_path: config/aiml_dart.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1777533905
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

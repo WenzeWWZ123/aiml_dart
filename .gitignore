@@ -1,0 +1,18 @@
+# ROS2
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# RViz temp
+*.rviz
+
+# Generated files (optional)
+*.urdf
+*_flat*

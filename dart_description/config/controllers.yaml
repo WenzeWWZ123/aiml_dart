@@ -1,0 +1,125 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+    left_hand_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    right_hand_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+    head_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    
+    base_controller:
+      type: diff_drive_controller/DiffDriveController
+
+
+left_arm_controller:
+  ros__parameters:
+    joints:
+      - l_joint1
+      - l_joint2
+      - l_joint3
+      - l_joint4
+      - l_joint5
+      - l_joint6
+      - l_joint7
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+right_arm_controller:
+  ros__parameters:
+    joints:
+      - r_joint1
+      - r_joint2
+      - r_joint3
+      - r_joint4
+      - r_joint5
+      - r_joint6
+      - r_joint7
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+left_hand_controller:
+  ros__parameters:
+    joints:
+      - L_thumb_MCP_joint1
+      - L_thumb_MCP_joint2
+      - L_thumb_PIP_joint
+      - L_thumb_DIP_joint
+      - L_index_MCP_joint
+      - L_index_DIP_joint
+      - L_middle_MCP_joint
+      - L_middle_DIP_joint
+      - L_ring_MCP_joint
+      - L_ring_DIP_joint
+      - L_pinky_MCP_joint
+      - L_pinky_DIP_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+right_hand_controller:
+  ros__parameters:
+    joints:
+      - R_thumb_MCP_joint1
+      - R_thumb_MCP_joint2
+      - R_thumb_PIP_joint
+      - R_thumb_DIP_joint
+      - R_index_MCP_joint
+      - R_index_DIP_joint
+      - R_middle_MCP_joint
+      - R_middle_DIP_joint
+      - R_ring_MCP_joint
+      - R_ring_DIP_joint
+      - R_pinky_MCP_joint
+      - R_pinky_DIP_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+head_controller:
+  ros__parameters:
+    joints:
+      - head_joint1
+      - head_joint2
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+base_controller:
+  ros__parameters:
+    left_wheel_names: ["l_wheel_joint"]
+    right_wheel_names: ["r_wheel_joint"]
+
+    wheel_separation: 0.3586
+    wheel_radius: 0.08
+
+    cmd_vel_timeout: 0.5
+    use_stamped_vel: false
+    publish_rate: 50.0
+    base_frame_id: base_link
+    odom_frame_id: odom
+    enable_odom_tf: true
